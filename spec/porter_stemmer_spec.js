@@ -132,5 +132,7 @@ describe('porter_stemmer', function() {
 		stemmer.attach();
 		expect('scoring stinks'.tokenizeAndStem()).toEqual(['score', 'stink']);
 		expect('SCORING STINKS'.tokenizeAndStem()).toEqual(['score', 'stink']);
+        expect('this has been our only test'.tokenizeAndStem()).toEqual(['test']);
+        expect('This Has Been Our Only Test'.tokenizeAndStem()).toEqual(['test']);
 	});
 });
