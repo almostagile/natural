@@ -38,6 +38,8 @@ describe('porter_stemmer', function() {
 		expect(stemmer.step1b('bled')).toBe('bled');
 		expect(stemmer.step1b('motoring')).toBe('motor');
 		expect(stemmer.step1b('sing')).toBe('sing');
+        expect(stemmer.step1b('updating')).toBe('update');
+        expect(stemmer.step1b('updated')).toBe('update');
 	});
 
 	it('should perform step 1c', function() {
@@ -123,6 +125,7 @@ describe('porter_stemmer', function() {
 		expect(stemmer.stem('SCORE')).toBe('score');
 		expect(stemmer.stem('nationals')).toBe('nation');
 		expect(stemmer.stem('doing')).toBe('do');
+        expect(stemmer.stem('Updating')).toBe('updat');
 	});
 
 	it('should tokenize and stem attached', function() {
